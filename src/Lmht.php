@@ -5,8 +5,8 @@ namespace DesignLiquido\Lmht;
 use DOMDocument;
 use XSLTProcessor;
 
-class Lmht 
-{   
+class Lmht
+{
     protected $domXsl;
 
     public function __construct()
@@ -37,8 +37,8 @@ class Lmht
         $xslt = new XSLTProcessor();
 
         $xslt->importStylesheet($this->domXsl);
-        
-		return $xslt->transformToXML($dom);
+
+        return $xslt->transformToXML($dom);
     }
 
     protected function obterEspecificacao()
