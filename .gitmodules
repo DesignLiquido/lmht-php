@@ -1,4 +1,0 @@
-[submodule "especificacao"]
-	path = especificacao
-	url = https://github.com/DesignLiquido/LMHT.git
-	branch = principal
