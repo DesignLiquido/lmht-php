@@ -20,19 +20,19 @@ class Lmht
 
         $dom->loadXML($codigoLmht);
 
-        return $this->transformarXML($dom);
+        return $this->transformarParaXml($dom);
     }
 
     public function converterPorArquivo(string $caminho)
     {
-        $dom = new DOMDocument();
+        $dom = new DOMDocument('1.0', 'UTF-8');
 
         $dom->load($caminho);
 
-        return $this->transformarXML($dom);
+        return $this->transformarParaXml($dom);
     }
 
-    protected function transformarXML(DOMDocument $dom)
+    protected function transformarParaXml(DOMDocument $dom)
     {
         $xslt = new XSLTProcessor();
 
