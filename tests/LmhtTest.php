@@ -16,4 +16,18 @@ class LmhtTest extends TestCase
 
         $this->assertTrue(strpos($html, '</html>') !== false);
     }
+
+
+    public function testConverterPorArquivo()
+    {
+        $file = __DIR__ . '/../especificacao/exemplo.lmht';
+
+        $html = (new Lmht)->converterPorArquivo($file);
+
+        $this->assertTrue(strpos($html, '<body>') !== false);
+
+        $this->assertTrue(strpos($html, '</html>') !== false);
+
+        $this->assertTrue(strpos($html, 'Isto é um parágrafo.') !== false);
+    }
 }
