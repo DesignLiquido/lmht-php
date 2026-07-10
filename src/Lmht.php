@@ -7,7 +7,7 @@ use XSLTProcessor;
 
 class Lmht
 {
-    protected $domXsl;
+    protected DOMDocument $domXsl;
 
     public function __construct()
     {
@@ -41,7 +41,7 @@ class Lmht
         return $xslt->transformToXML($dom);
     }
 
-    protected function obterEspecificacao()
+    protected function obterEspecificacao(): DOMDocument
     {
         $dom = new DOMDocument();
 
